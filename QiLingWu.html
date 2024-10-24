@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>麒麟舞 - 中国传统民间舞蹈艺术</title>
+    <style>
+        @keyframes backgroundMove {
+            0% {
+                background-position: 0 0;
+            }
+            100% {
+                background-position: 100% 100%;
+            }
+        }
+
+        body {
+            font-family: 'STKaiti', 'KaiTi', '楷体', serif;
+            line-height: 1.6;
+            color: #333;
+            background: url('img/1.jpg') no-repeat center center fixed;
+            background-size: 120% 120%;
+            animation: backgroundMove 60s ease infinite alternate;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(255, 253, 240, 0.85);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        h1, h2 {
+            color: #2F4F4F;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 2.5em;
+            text-align: center;
+            border-bottom: 2px solid #2F4F4F;
+            padding-bottom: 10px;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+            background-color: #2F4F4F;
+            border-radius: 5px;
+        }
+        nav ul li a {
+            color: #F0F0F0;
+            text-decoration: none;
+            padding: 10px;
+            display: block;
+        }
+        nav ul li a:hover {
+            background-color: #3D6F6F;
+        }
+        section {
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: rgba(255, 255, 255, 0.7);
+            border-radius: 5px;
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #2F4F4F;
+        }
+        .audio-control {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: rgba(47, 79, 79, 0.7);
+            padding: 10px;
+            border-radius: 5px;
+            color: #F0F0F0;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <audio id="bgMusic" loop>
+        <source src="sounds/高山流水.mp3" type="audio/mpeg">
+        您的浏览器不支持音频元素。
+    </audio>
+
+    <div class="audio-control" onclick="toggleMusic()">
+        <span id="musicStatus">播放音乐</span>
+    </div>
+
+    <div class="container">
+        <header>
+            <h1>麒麟舞 - 中国传统民间舞蹈艺术</h1>
+        </header> 
+        
+        <nav>
+            <ul>
+                <li><a href="#intro">简介</a></li>
+                <li><a href="#history">历史渊源</a></li>
+                <li><a href="#performance">表演特点</a></li>
+                <li><a href="#significance">文化意义</a></li>
+            </ul>
+        </nav>
+        
+        <main>
+            <section id="intro">
+                <h2>简介</h2>
+                <p>麒麟舞是中国传统民间舞蹈艺术的瑰宝,以其独特的造型和丰富的文化内涵闻名。麒麟是中国神话中的祥瑞之兽,象征着吉祥、和平与繁荣。</p>
+                <p>这种舞蹈形式在中国南方地区尤为盛行,特别是在广东、福建等地。麒麟舞不仅是一种表演艺术,更是中国传统文化中祈福纳祥、驱邪避灾的重要仪式。</p>
+                <p>在麒麟舞中,舞者通过模仿麒麟的动作,展现出这种神兽的威武和灵动,同时也传达出人们对美好生活的向往和祝福。</p>
+            </section>
+            
+            <section id="history">
+                <h2>历史渊源</h2>
+                <p>麒麟舞的起源可以追溯到汉代,经过漫长的历史演变,形成了今天我们所见到的形式。它融合了舞蹈、杂技和民间传说等多种元素。</p>
+                <p>据史料记载,早在西汉时期,民间就有了模仿麒麟形象的舞蹈表演。到了唐宋时期,麒麟舞逐渐发展成为一种成熟的民间艺术形式。</p>
+                <p>明清时期,麒麟舞在南方地区广泛流传,并与地方戏曲、武术等艺术形式相互融合,形成了独具特色的表演风格。</p>
+                <p>近代以来,麒麟舞作为非物质文化遗产得到了广泛的保护和传承,成为展示中国传统文化魅力的重要窗口。</p>
+            </section>
+            
+            <section id="performance">
+                <h2>表演特点</h2>
+                <p>麒麟舞的表演通常由两人合作完成,一人扮演前腿,一人扮演后腿。舞者身着色彩鲜艳的麒麟服饰,模仿麒麟的动作,如跳跃、翻滚、摇头摆尾等,动作灵活生动,充满活力。</p>
+                <p>麒麟舞的表演通常伴随着锣鼓、铙钹等传统乐器的伴奏,节奏明快,气氛热烈。舞者需要具备出色的身体协调能力和默契配合,才能将麒麟的神态和动作表现得惟妙惟肖。</p>
+                <p>在表演中,麒麟常常会做出"采青"的动作,即用嘴咬住一束青菜或青草。这个动作象征着祥瑞和丰收,是麒麟舞中最具代表性的表演环节之一。</p>
+                <p>不同地区的麒麟舞也有其独特的风格。例如,广东的麒麟舞注重武术元素,动作刚劲有力;而福建的麒麟舞则更强调杂技技巧,表演中常见高难度的翻腾动作。</p>
+            </section>
+            
+            <section id="significance">
+                <h2>文化意义</h2>
+                <p>麒麟舞不仅是一种娱乐表演,更承载着深厚的文化内涵。它象征着驱邪避灾、祈福纳祥,在传统节日、庆典和重要仪式中经常可以看到麒麟舞的身影。</p>
+                <p>在中国传统文化中,麒麟被视为仁兽和瑞兽,代表着祥和、正义和太平盛世。麒麟舞的表演,正是人们对这种美好愿望的艺术化表达。</p>
+                <p>作为非物质文化遗产,麒麟舞在传承中华文化、增强文化认同感方面发挥着重要作用。它不仅在国内广受欢迎,也成为向世界展示中国传统文化魅力的重要载体。</p>
+                <p>在现代社会,麒麟舞也被赋予了新的意义。它成为连接海外华人与祖国文化的纽带,在世界各地的唐人街和华人社区,麒麟舞表演常常成为重要节日庆祝活动中不可或缺的一部分。</p>
+                <p>总的来说,麒麟舞作为中国传统文化的重要组成部分,不仅丰富了人们的精神文化生活,也为中华文化的传承和发展做出了重要贡献。</p>
+            </section>
+        </main>
+        
+        <footer>
+            <p>&copy; 2023 麒麟舞文化传承网站。保留所有权利。</p>
+        </footer>
+    </div>
+
+    <script>
+        var music = document.getElementById("bgMusic");
+        var musicStatus = document.getElementById("musicStatus");
+        var isPlaying = false;
+
+        function toggleMusic() {
+            if (isPlaying) {
+                music.pause();
+                musicStatus.textContent = "播放音乐";
+            } else {
+                music.play();
+                musicStatus.textContent = "暂停音乐";
+            }
+            isPlaying = !isPlaying;
+        }
+
+        // 当页面加载完成时自动播放音乐
+        window.onload = function() {
+            music.volume = 0.5; // 设置音量为50%
+            music.play().catch(function(error) {
+                console.log("自动播放失败。这可能是由于浏览器的自动播放策略造成的。");
+            });
+            isPlaying = true;
+            musicStatus.textContent = "暂停音乐";
+        };
+    </script>
+</body>
+</html>
