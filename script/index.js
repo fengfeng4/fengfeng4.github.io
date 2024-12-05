@@ -61,21 +61,37 @@
 //     }
 // }
 
-var divNum = 0;
-function showDiv(index)
+function hideDiv(index)
 {
-    var div1 = document.getElementById(divNum);
-    var div2 = document.getElementById(index);  
-
+    var div1 = document.getElementById(index);
     div1.style.display = "none";
     div1.style.transition = "none";
-    
+}
+
+function showDiv(index)
+{
+    var div2 = document.getElementById(index);
     div2.style.opacity = "0";
     div2.style.display = "block";
     div2.style.transition = "1.3s ease, height 1.3s ease";
     setTimeout(() => {
         div2.style.opacity = "1";
     }, 0);
-    
     divNum = index;
+}
+
+var showing1 = 0;
+function showDiv1(index)
+{
+    hideDiv(showing1);
+    showDiv(index)
+    showing1 = index;
+}
+
+var showing2 = 31;
+function showDiv2(index)
+{
+    hideDiv(showing2);
+    showDiv(index)
+    showing2 = index;
 }

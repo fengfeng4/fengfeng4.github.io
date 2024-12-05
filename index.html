@@ -8,13 +8,10 @@
 
     <title>麒麟舞</title>
 
-    <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/banner.css">
-    <link rel="stylesheet" href="./css/header.css"> 
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/footer.css">
 
-    <script src="https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/0.1.0-beta.7/libs/cn/index.js"></script>
     <script type="text/javascript" src="./script/index.js"></script>
 </head>
 
@@ -23,14 +20,14 @@
     <section class="Banner">
         <ul>
             <li class="left">
-                <button class="left_button" onclick="scrollToSection('0')">麒迹云台</button>
+                <button class="left_button">麒迹云台</button>
             </li>
 
             <li class="right">
-                <button class="right_button" onclick="showDiv(0)">主页</button>
-                <button class="right_button" onclick="showDiv(1)">企业服务</button>
-                <button class="right_button" onclick="showDiv(2)">大众教学</button>
-                <button class="right_button" onclick="showDiv(3)">文创产品</button>
+                <button class="right_button" onclick="showDiv1(0)">主页</button>
+                <button class="right_button" onclick="showDiv1(1)">企业服务</button>
+                <button class="right_button" onclick="showDiv1(2)">大众教学</button>
+                <button class="right_button" onclick="showDiv1(3)">文创产品</button>
             </li>
         </ul>
     </section>
@@ -120,7 +117,7 @@
         <h2>文创产品</h2>
 
         <div class="Goods">
-            <div class="Good">
+            <div class="Good " id=31>
                 <div class="Pic">
                     <img src="./img/product01.avif" alt="限定文化衫">
                 </div>
@@ -131,7 +128,7 @@
                 </div>
             </div>
 
-            <div class="Good">
+            <div class="Good" id=32 style="display: none;">
                 <div class="Pic">
                     <img src="./img/product02.avif" alt="艺术挂画">
                 </div>
@@ -142,7 +139,7 @@
                 </div>
             </div>
 
-            <div class="Good">
+            <div class="Good" id=33 style="display: none;">
                 <div class="Pic">
                     <img src="./img/product03.avif" alt="传统配饰">
                 </div>
@@ -154,7 +151,19 @@
             </div>
         </div>
 
-        <div class="Contacts">
+        <ul>
+            <li>
+                <h3 onclick="showDiv2(31)">限定文化衫</h3>
+            </li>
+            <li>
+                <h3 onclick="showDiv2(32)">麒麟立模</h3>
+            </li>
+            <li>
+                <h3 onclick="showDiv2(33)">传统配饰</h3>
+            </li>
+        </ul>
+
+        <!-- <div class="Contacts">
             <div class="Contact">
                 <div class="Icon">
                     <img src="./img/store.png" alt="商店">
@@ -178,7 +187,7 @@
                 <h3>社交媒体</h3>
                 <p>关注我们的最新动态</p>
             </div>
-        </div>
+        </div> -->
     </section>
 
     <footer>
