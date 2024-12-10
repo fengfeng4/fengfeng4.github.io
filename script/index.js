@@ -73,7 +73,7 @@ function showDiv(index)
     var div2 = document.getElementById(index);
     div2.style.opacity = "0";
     div2.style.display = "block";
-    div2.style.transition = "1.3s ease, height 1.3s ease";
+    div2.style.transition = "1.2s ease, height 1.2s ease";
     setTimeout(() => {
         div2.style.opacity = "1";
     }, 0);
